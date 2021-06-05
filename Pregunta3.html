@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>La computación gráfica aplica al medio ambiente</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+</head>
+<script type="text/javascript" src="js/popper.min.js"></script>
+<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script>
+    $(function(){
+        $("#btn1").on("click",function(){
+            $(".navegacion").toggle("slow");
+        });
+    })
+</script>
+<body>
+    <nav class="navegacion">
+		<ul>
+			<li class="titulo-nav">Paginas</li>
+			<li><a href="index.html">Caratula</a></li>
+			<li><a href="#introduccion">Introducción</a></li>
+			<li><a href="Pregunta1.html">¿Que es computación gráfica y cuál es su importancia?</a></li>
+			<li><a href="Pregunta2.html">¿Que elementos permiten que la computación gráfica se haya desarrollado ampliamente?</a></li>
+			<li><a href="Pregunta3.html">La computación gráfica aplica al medio ambiente</a></li>
+			<li><a href="Pregunta4.html">Un demo en collab phython (Pequeño programa)</a></li>
+            <li><a href="Pregunta5.html">Conclusiones</a></li>
+            <li><a href="Pregunta6.html">Recomendaciones</a></li>
+            <li><a href="Pregunta7.html">Bibliografía</a></li>
+		</ul>
+	</nav>
+    <!--FIN APARTADO PARA INDICE-->
+    <!--APARTADO PARA MAIN-->
+    <main class="contenido">
+        <!--APARTADO PARA ARTICLE-->
+		<article id="caratula" class="caratula">
+            <!--APARTADO PARA DIV DE TITULO-->
+            <div>
+			<h1>
+				<td>La computación gráfica aplica al medio ambiente</td>
+				<td><button id="btn1"><img class="img1" src="img/hoja.png" width="20" height="20"></button></td>
+			</h1>
+            </div>
+            <!--FIN APARTADO PARA DIV DE TITULO-->
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="img/Opcion1.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img/logo-untels.png" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img/fondo-montaña.png" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+              </div>
+        <!--FIN APARTADO PARA DIV DE IMAGENES-->
+		</article>
+		<article id="introduccion" >
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+			<img src="img/imagen.jpg" class="img-pequeña">
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+		</article>
+	</main>
+</body>
+</html>

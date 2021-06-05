@@ -1,0 +1,90 @@
+*{
+	margin: 0;
+}
+body{
+	padding: 20px 50px;
+	font-family: Arial;
+	background: url('img/Opcion1.jpg');
+	background-attachment: fixed;
+	background-repeat: no-repeat; 
+	background-size: 100% 100%;
+}
+
+.navegacion{
+	position: fixed;
+	width: 24%;
+	height: auto;
+	background: yellow;
+	border-radius: 8px;
+	right: 50px;
+}
+li{
+	list-style: none;
+	padding: 5px;
+}
+ul{
+	padding: 10px;
+}
+.titulo-nav{
+	font-size: 20px;
+	margin-bottom: 10px;
+	text-align: center;
+	color: blue;
+}
+.contenido{
+	background: rgba(255, 255, 255, 0.8);
+	width: 70%;
+	height: auto;
+	border-radius: 8px;
+	padding: 0px 20px 100px 20px;
+}
+.caratula h1{
+	font-size: 22px;
+	font-style: bold;
+	font-weight: bold;
+}
+.caratula{
+	text-align: center;
+	padding-top: 20px;
+}
+
+.caratula p{
+	margin-top: 5px;
+
+}
+.tema{
+	font-weight: bold;
+	font-size: 19px;
+}
+article{
+	padding-top: 50px;
+}
+article h1{
+	text-align: center;
+	margin-bottom: 20px;
+	font-weight: bold;
+	font-size: 22px;
+}
+article p{
+	line-height: 150%; 
+}
+.imgindex{
+	width: 200px;
+	margin-top: 10px;
+
+}
+article .img-pequeña{
+	width: 300px;
+}
+article .img-mediana{
+	width: 450px;
+}
+article .img-grande{
+	width: 100%;
+}
+.tableprg1{
+	margin: auto auto;
+}
+.tableprg1 td{
+	width: 25%;
+}
