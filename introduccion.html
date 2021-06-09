@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Introduccion</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script>
+        $(function(){
+            $("#btn1").on("click",function(){
+                $(".navegacion").toggle("slow");
+            });
+        })
+      </script>
+</head>
+<body>
+    <!--APARTADO PARA INDICE-->
+    <nav class="navegacion">
+		<ul>
+			<li class="titulo-nav">Paginas</li>
+			<li><a href="index.html">Caratula</a></li>
+			<li><a href="introduccion.html">Introducción</a></li>
+			<li><a href="Pregunta1.html">¿Que es computación gráfica y cuál es su importancia?</a></li>
+			<li><a href="Pregunta2.html">¿Que elementos permiten que la computación gráfica se haya desarrollado ampliamente?</a></li>
+			<li><a href="Pregunta3.html">La computación gráfica aplica al medio ambiente</a></li>
+			<li><a href="Pregunta4.html">Un demo en collab phython (Pequeño programa)</a></li>
+            <li><a href="Pregunta5.html">Conclusiones</a></li>
+            <li><a href="Pregunta6.html">Recomendaciones</a></li>
+            <li><a href="Pregunta7.html">Bibliografía</a></li>
+		</ul>
+	</nav>
+    <!--FIN APARTADO PARA INDICE-->
+    <!--APARTADO PARA MAIN-->
+    <main class="contenido">
+        <!--APARTADO PARA ARTICLE-->
+		<article id="introduccion" >
+            <h1>
+                INTRODUCCION
+                <button id="btn1"><img class="img1" src="img/hoja.png" width="20" height="20"></button>
+            </h1>
+		</article>
+	</main>
+
+</body>
+</html>

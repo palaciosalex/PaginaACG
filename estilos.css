@@ -4,7 +4,7 @@
 body{
 	padding: 20px 50px;
 	font-family: Arial;
-	background: url('img/Opcion1.jpg');
+	background: url('img/fondo.jpg');
 	background-attachment: fixed;
 	background-repeat: no-repeat; 
 	background-size: 100% 100%;
@@ -18,11 +18,11 @@ body{
 	border-radius: 8px;
 	right: 50px;
 }
-li{
+.navegacion li{
 	list-style: none;
 	padding: 5px;
 }
-ul{
+.navegacion ul{
 	padding: 10px;
 }
 .titulo-nav{
@@ -47,44 +47,74 @@ ul{
 	text-align: center;
 	padding-top: 20px;
 }
-
+.caratula li{
+	text-align: left;
+}
+.caratula ul{
+	width: auto;
+	margin: auto;
+	padding: 10px 0px;
+	width: 300px;
+}
 .caratula p{
 	margin-top: 5px;
-
+	
 }
 .tema{
 	font-weight: bold;
 	font-size: 19px;
-}
-article{
-	padding-top: 50px;
-}
-article h1{
-	text-align: center;
-	margin-bottom: 20px;
-	font-weight: bold;
-	font-size: 22px;
-}
-article p{
-	line-height: 150%; 
 }
 .imgindex{
 	width: 200px;
 	margin-top: 10px;
 
 }
+/*estilos de paginas*/
+article{
+	padding-top: 40px;
+}
+article h1{
+	text-align: center;
+	margin-bottom: 50px;
+	font-weight: bold;
+	font-size: 22px;
+}
+
+article h2{
+	font-size: 19px;
+	font-weight: bold;
+	margin-top:15px;
+	margin-bottom: 15px;
+}
+article h3{
+	margin-top: 15px;
+	font-size: 16px;
+	font-weight: bold;
+}
+article p{
+	line-height: 150%; 
+}
+article img{
+	margin: 20px auto;
+	display: block;
+}
 article .img-pequeña{
 	width: 300px;
 }
 article .img-mediana{
-	width: 450px;
+	width: 500px;
 }
 article .img-grande{
 	width: 100%;
 }
-.tableprg1{
-	margin: auto auto;
+
+#btn1{
+	border: 0;
+	padding: 0;
 }
-.tableprg1 td{
-	width: 25%;
+#btn1 img{
+	margin: 0;
+}
+#carouselExampleControls{
+	display: none;
 }

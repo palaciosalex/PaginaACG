@@ -6,18 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="estilos.css">
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script>
+        $(function(){
+            $("#btn1").on("click",function(){
+                $(".navegacion").toggle("slow");
+            });
+        })
+    </script>
 </head>
-<script type="text/javascript" src="js/popper.min.js"></script>
-<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script>
-    $(function(){
-        $("#btn1").on("click",function(){
-            $(".navegacion").toggle("slow");
-        });
-    })
-</script>
+
 <body>
     <nav class="navegacion">
 		<ul>
@@ -37,34 +38,92 @@
     <!--APARTADO PARA MAIN-->
     <main class="contenido">
         <!--APARTADO PARA ARTICLE-->
-		<article id="caratula" class="caratula">
-            <!--APARTADO PARA DIV DE TITULO-->
-            <div>
-			<h2>
-				<td >¿Que elementos permiten que la computación gráfica se haya desarrollado ampliamente?</td>
-				<td><button id="btn1"><img class="img1" src="img/hoja.png" width="20" height="20"></button></td>
-			</h1>
-            </div>
-            <!--FIN APARTADO PARA DIV DE TITULO-->
-            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="img/Opcion1.jpg" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="img/logo-untels.png" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="img/fondo-montaña.png" class="d-block w-100" alt="...">
-                  </div>
-                </div>
-              </div>
-        <!--FIN APARTADO PARA DIV DE IMAGENES-->
-		</article>
+
 		<article id="introduccion" >
-			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-			<img src="img/imagen.jpg" class="img-pequeña">
-			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+      <h1>
+        ¿QUE ELEMENTOS PERMITEN QUE LA COMPUTACION GRAFICA SE HAYA DESARROLLADO AMPLIAMENTE?
+        <button id="btn1"><img class="img1" src="img/hoja.png" width="20" height="20"></button>
+      </h1>
+
+      <h2>
+         AutoCad y Blender
+      </h2>
+
+		  <p> Son utilizados como base en el diseño de diversos objetos compatibles
+          con la impresión en tercera dimensión.Por ejemplo son usados en la 
+          impresión de modelos 3D que están siendo aplicados en la generación de 
+          implantes personalizados como prótesis de rodilla y cadera “hechos a la medida”.</p>
+			<img src="img/protesis.gif" class="img-mediana">
+
+
+
+      <h2>
+        Impresora 3D cartesiana
+     </h2>
+
+		  <p> Reciben este nombre debido al sistema que utilizan de coordenadas dimensionales, 
+          el cartesiano. Consiste en tres ejes ortogonales -el eje X, Y y Z- que se utilizan 
+          para determinar dónde y cómo se debe mover el cabezal de impresión en las tres 
+          dimensiones de forma correcta, y corregir así la dirección del movimiento.
+      </p>
+      <img src="img/cartesiana2.gif" class="img-mediana">
+
+
+
+      <h2>
+        PolyJet
+      </h2>
+     
+      <p> La impresión 3D PolyJet es similar a la impresión por inyección de tinta de
+          documentos solo que, en lugar de pulverizar tinta encima de un papel, genera
+          una serie de capas de un fotopolímero líquido (que al instante cura con luz UV,para pasar a un estado sólido), y esas capas terminan por conformar el objeto.      
+      </p>
+      <img src="img/poli.gif" class="img-mediana">
+
+
+
+      <h2>
+        Estereolitografía
+      </h2>
+      <p> La estereolitografía o SLA, también conocida como fabricación óptica, basa
+          su funcionamiento en fotopolímeros en un estado líquido viscoso que son capaces
+          de cambiar a un estado sólido mediante la exposición a la luz. Sobre un 
+          recipiente lleno de este fotopolímero, situado encima de una plataforma, se ubica
+          un láser que se va desplazando sobre el líquido siguiendo la forma del objeto a 
+          reproducir y consiguiendo que la resina pase de estado líquido a sólido.     
+      </p>
+      <img src="img/estereolo.gif" class="img-mediana">
+
+
+
+      <h2>
+        Algoritmos Raster
+      </h2>
+      <p> Es el proceso por el cual una imagen descrita en un formato gráfico vectorial se 
+          convierte en un conjunto de píxeles o puntos para ser desplegados en un medio de salida
+          digital, como una pantalla de computadora, una impresora electrónica o una Imagen de mapa de bits.
+      </p>
+      <img src="img/raster.gif" class="img-mediana">
+
+
+
+
+
+
+
+
+
+
+
+
+      
+           
+  
+
+
+
+
 		</article>
 	</main>
 </body>
