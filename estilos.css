@@ -32,7 +32,7 @@ body{
 	color: blue;
 }
 .contenido{
-	background: rgba(255, 255, 255, 0.9);
+	background: rgba(255, 255, 255, 0.8);
 	width: 70%;
 	height: auto;
 	border-radius: 8px;
@@ -117,4 +117,9 @@ article .img-grande{
 }
 #carouselExampleControls{
 	display: none;
+}
+.btn{
+	margin-top: 30px;
+	margin-left: 10px;
+	float: right;
 }
