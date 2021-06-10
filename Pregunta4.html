@@ -41,113 +41,56 @@
             <h1>
                 DEMO EN COLLAB PYTHON
                 <button id="btn1"><img class="img1" src="img/hoja.png" width="20" height="20"></button>
-            </h1> 
+            </h1>           
             <h2>
-                MDT en 3 dimensiones con Python
-            </h2> 
-            <h3>
-                Antes de nada cargaremos los siguientes módulos en Python:
-            </h3>            
-            <p>
-                <hr></hr>                
-                from matplotlib import cbook<p></p>
-                from matplotlib import cm<p></p>
-                from matplotlib.colors import LightSource<p></p>
-                from mpl_toolkits.mplot3d import axes3d, Axes3D<p></p>
-                import matplotlib.pyplot as plt<p></p>
-                import numpy as np<p></p>
-                import gdal                
-                <hr></hr>
-            </p> 
-            <h3>
-                El formato .npz (el que se usa de entrada en el ejemplo) es un fichero de numpy que contiene diferentes arrays. Vamos a guardar los valores que van a ser relevantes para la generación del gráfico y para ello necesitamos obtenerlos del ráster. Aquí es donde Python entra en juego para obtener la elevación y las esquinas coordenadas de las esquinas que delimitan los datos. Para ello usaremos el siguiente código:
-            </h3>
-            <p>
-                <hr></hr>
-                #Cargamos la ruta del ráster en la variable "dsm" antes<p></p>
-                image = gdal.Open(dsm)<p></p>
-                band = image.GetRasterBand(1)<p></p>
-                gt = image.GetGeoTransform()<p></p>
-                xsize = gt[1]<p></p>
-                #Leemos los valores del MDT como un array de dimensiones x, y (x arrays de y elementos)<p></p>
-                z = band.ReadAsArray()<p></p>
-                nrows, ncols = z.shape<p></p>
-                xmin = gt[0]<p></p>
-                xmax = xmin + (ncols * xsize)<p></p>
-                ymin = gt[2]<p></p>
-                #Conocemos la resolución en "y", es igual a la resolución en "x"<p></p>
-                ymax = ymin + (nrows * xsize)
-                <hr></hr>
-            </p>
-            <h3>
-                Ahora ya tenemos almacenados en las variables z, xmin, xmax, ymin e ymax los valores que nos interesan. Vamos a guardarlos en un fichero .npz mediante numpy y estableciendo parejas clave-valor donde elevation serán los valores que tenemos en la variable «z».
-            </h3>
-            <p>
-                <hr></hr>
-                #Hemos importado numpy como np<p></p>
-                #npz es el nombre de la variable que contiene la ruta para el fichero npz<p></p>
-                np.savez(npz, elevation = z, xmin = xmin, xmax = xmax, ymin = ymin, ymax = ymax)<p></p>
-                <hr></hr>
-            </p>     
-            <h3>
-                Ya tenemos un fichero .npz a partir de nuestro MDT. Y ahora procederemos a generar el gráfico.
-                Uso de matplotlib para generar el gráfico tridimensional
-                Mediante las siguientes líneas abriremos el archivo y le daremos forma a los datos.
-            </h3>     
-            <p>
-                <hr></hr>
-                with cbook.get_sample_data(npz) as file, \<p></p>
-                np.load(file) as dem:<p></p>
-                z = dem['elevation']<p></p>
-                nrows, ncols = z.shape<p></p>
-                x = np.linspace(dem['xmin'], dem['xmax'], ncols)<p></p>
-                y = np.linspace(dem['ymin'], dem['ymax'], nrows)<p></p>
-                x, y = np.meshgrid(x, y)
-                <hr></hr>
-            </p>
-            <h3>
-                Es necesario ahora definir una región de datos que es la que se va a imprimir. Si los datos no son muy extensos se puede usar np.s_[0: , 0: ], aunque el método también sirve para recortar valores anómalos que podamos encontrar en los bordes de la imagen.
-            </h3>
-            <p>
-                <hr></hr>
-                region = np.s_[10:-10, 10:-10]<p></p>
-                x, y, z = x[region], y[region], z[region]
-                <hr></hr>
-            </p>
-            <h3>
-                Ahora procedemos a configurar el espacio:
-            </h3>
-            <p>
-                <hr></hr>
-                fig = plt.figure()<p></p>
-                ax = Axes3D(fig)<p></p>
-                ls = LightSource(270, 45)<p></p>
-                rgb = ls.shade(z, cmap=cm.gist_earth, vert_exag=0.1, blend_mode='soft')<p></p>
-                surf = ax.plot_surface(x, y, z, rstride=1, cstride=1, facecolors=rgb, linewidth=0, antialiased=False, shade=False)<p></p>
-                #Invierte la dirección del eje x<p></p>
-                ax.invert_xaxis()<p></p>
-                #Con plt.show() abrimos la ventana que mostrará el gráfico<p></p>
-                plt.show()
-                <hr></hr>
-            </p>
-            <h3>
-                Hasta aquí el código nos devuelve la imagen que encabeza el artículo que representa el Puerto del León en Málaga. Pero podemos darle otra rampa de color mediante:
-            </h3>
-            <p>
-                <hr></hr>
-                N = 256<p></p>
-                vals = np.ones((N, 4))<p></p>
-                #El primer número refleja el color en la escala de 256 valores de RGB para el canal 0=R, 1=G, 2=B<p></p>
-                vals[:, 0] = np.linspace(10/256, 1, N)<p></p>
-                vals[:, 1] = np.linspace(35/256, 1, N)<p></p>
-                vals[:, 2] = np.linspace(5/256, 1, N)<p></p>
-                newcmp = ListedColormap(vals)
-                <hr></hr>
-            </p>
-            <h3>
-                Y obtenemos el siguiente resultado:
-            </h3>
-            <img src="img/pythonDemo.png" class="img-mediana" >   
+                Primero instalamos: "!pip3 install ColabTurtle"
+            </h2>
+            <h2>
+                Posterior a esto usaremos el código:                                
+            </h2>
+            <pre style="font-family: sans-serif;" >
+                from ColabTurtle.Turtle import * 
+                initializeTurtle()
+                speed(9)
+                color('green')
+                penup()
+                goto(200,400)
+                pendown()
+                for i in range(60):
+                #camina 
+                forward(300)
+                #giro
+                right(102)
+            </pre>
+            <h2>
+                Con esto obtenemos:
+            </h2>
+            <img src="img/T1.PNG" class="img-mediana" >
+            <h2>
+                Segundo Ejemplo:
+            </h2>
+            <h2>
+                Con el código: 
+            </h2>
+            <pre style="font-family: sans-serif;" >
+                import random
+                from ColabTurtle.Turtle import * 
+                initializeTurtle()
+                speed(9)
+                color('green')
+                width(1)
+                penup()
+                pendown()
+                for i in range(60):
+                color(random.choice(VALID_COLORS[:-1]))
+                forward(i*10)
+                right(144)
+                hideturtle()
+            </pre>
+            <h2>
+                Con esto obtenemos:
+            </h2>
+            <img src="img/T2.PNG" class="img-mediana" >
 		</article>
 	</main>
     <div style='text-align:center'>
